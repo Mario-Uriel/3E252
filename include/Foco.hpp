@@ -4,12 +4,22 @@
 class Foco
 {
 private:
-    EstadoFoco foco;
-
+    EstadoFoco estado;
 public:
-    Foco() {}
-    ~Foco() {}
-    void Encender() {}
-    void Apagar () {}
+    Foco() //constructor
+    {
+        estado = false;
+    }
+    ~Foco() // Destructor
+    {}
+    void Encender () {
 
-}
+        estado = true;
+    }
+    void Apagar(){
+        estado = false;
+    }
+    EstadoFoco MostrarEstado(){
+        return estado;
+    }
+};
